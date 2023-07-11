@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import {useDispatch, useSelector } from 'react-redux'
 import { register, clearAuthError } from '../../actions/userActions'
 import { toast } from 'react-toastify';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Register() {
     const [userData, setUserData] = useState({
@@ -128,7 +128,13 @@ export default function Register() {
                 >
                 REGISTER
                 </button>
+                <div className='mt-2' style={{textAlign:'center'}} >
+                    <p>Have an account?</p>
+                    <Link  to="/login"><b style={{textAlign:'center'}}>Login</b></Link>
+                </div>
+                
             </form>
+           
             </div>
         </div>
     )
