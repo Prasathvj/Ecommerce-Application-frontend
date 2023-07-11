@@ -9,6 +9,7 @@ import { orderCompleted } from "../../slices/cartSlice";
 import {validateShipping} from '../cart/Shipping';
 import {createOrder} from '../../actions/orderActions'
 import { clearError as clearOrderError } from "../../slices/orderSlice";
+import Alert from 'react-bootstrap/Alert';
 
 export default function Payment() {
     const stripe = useStripe();
@@ -119,6 +120,19 @@ export default function Payment() {
 
 
      return (
+        <div>
+             <div className='admin-popup'>
+                <img className="arrow-img" src='https://3.bp.blogspot.com/-7p7u_Imcauc/W6BcRIbrW3I/AAAAAAAMKiU/4M212erT13snd7ncKI9S2dV37ikVQnTsQCLcBGAs/s1600/AS0004412_00.gif'/>
+                <Alert key='primary' variant='primary'>
+                <div>
+                    <h3><b style={{color:'black'}}>CARD Info:</b></h3> 
+                   <p>Card Number :<b> 4242 4242 4242 4242</b></p>
+                   <p>Card Expiry:<b style={{color:'green'}}> Any future date</b></p>
+                   <p>Card CVC:<b style={{color:'green'}}> Any 3 digits</b></p>
+                </div>
+                </Alert>
+            </div>
+        
         <div className="row wrapper">
             <div className="col-10 col-lg-5">
                 <form onSubmit={submitHandler} className="shadow-lg">
@@ -164,6 +178,7 @@ export default function Payment() {
         
                 </form>
             </div>
+        </div>
         </div>
     )
 }
