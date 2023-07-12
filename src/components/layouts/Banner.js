@@ -22,7 +22,7 @@ function Banner() {
                 <h5>Special Sale</h5>
                 <h3 style={{fontSize:'1.3rem'}}>Wireless. Effortless. Magical.</h3>
                 <p>From $160.00</p>
-                <Link to={'/product/64a6cda9517cc35ea70a430e'} className='banner-button'>BUY NOW</Link>
+                <Link to={'/product/64aeb3f144d5f750e98a5104'} className='banner-button'>BUY NOW</Link>
               </div>
               </div>
               <div class="carousel-item">
@@ -32,7 +32,7 @@ function Banner() {
                 <h5>AirPods Max </h5>
                 <h3 style={{fontSize:'1.5rem'}}>Bluetooth Headset</h3>
                 <p>From $999.00 or $41.62/mo</p>
-                <Link to={'/product/64a6cda9517cc35ea70a4314'} className='banner-button'>BUY NOW</Link>
+                <Link to={'/product/64a6cda9517cc35ea70a431b'} className='banner-button'>BUY NOW</Link>
               </div>
               </div>
               
