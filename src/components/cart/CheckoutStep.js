@@ -6,43 +6,43 @@ export default function CheckoutSteps({shipping, confirmOrder, payment}) {
         <div className="checkout-progress d-flex justify-content-center mt-5">
             {
             shipping ?
-            <Link to="/shipping">
+            <div>
                 <div className="triangle2-active"></div>
                 <div className="step active-step">Shipping Info</div>
                 <div className="triangle-active"></div>
-            </Link>:
-             <Link to="/shipping">
+            </div>:
+             <div>
                 <div className="triangle2-incomplete"></div>
                 <div className="step incomplete">Shipping Info</div>
                 <div className="triangle-incomplete"></div>
-             </Link>
+             </div>
             }
 
             { confirmOrder ?
-            <Link to="/order/confirm">
+            <div>
                 <div className="triangle2-active"></div>
                 <div className="step active-step">Confirm Order</div>
                 <div className="triangle-active"></div>
-            </Link>:
-             <Link to="/order/confirm">
+            </div>:
+             <div>
                 <div className="triangle2-incomplete"></div>
                 <div className="step incomplete">Confirm Order</div>
                 <div className="triangle-incomplete"></div>
-             </Link>
+             </div>
             }
 
             
             { payment ?
-            <Link to="/payment">
+            <div>
                 <div className="triangle2-active"></div>
                 <div className="step active-step">Payment</div>
                 <div className="triangle-active"></div>
-            </Link>:
-             <Link to="/payment">
+            </div>:
+             <div>
                 <div className="triangle2-incomplete"></div>
                 <div className="step incomplete">Payment</div>
                 <div className="triangle-incomplete"></div>
-             </Link>
+             </div>
             }
     
       </div>
