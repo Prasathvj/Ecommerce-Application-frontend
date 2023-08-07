@@ -47,15 +47,6 @@ export default function Shipping() {
 
     return (
         <Fragment>
-            <div className='admin-popup'>
-                <img className="arrow-img" src='https://3.bp.blogspot.com/-7p7u_Imcauc/W6BcRIbrW3I/AAAAAAAMKiU/4M212erT13snd7ncKI9S2dV37ikVQnTsQCLcBGAs/s1600/AS0004412_00.gif'/>
-                <Alert key='primary' variant='primary'>
-                <div>
-                    <h3><b style={{color:'black'}}>Shipping Info:</b></h3> 
-                   <p>The country should be a <b>united state</b> or select the <b>dollar-using countries.</b> </p>
-                </div>
-                </Alert>
-            </div>
             <CheckoutSteps shipping />
             <div className="row wrapper">
                     <div className="col-10 col-lg-5">

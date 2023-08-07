@@ -8,9 +8,9 @@ export default function OrderSuccess() {
 
                 
             </div>
-            <div>
+            <div className="paymentSucess">
             <h1>Your Order has been placed successfully.</h1>
-            <a href="/orders">Go to Orders</a>
+            <a style={{color:'green',fontSize:'1rem',fontWeight:'bold'}} href="/orders">Go to Orders</a>
             </div>
 
         </div>

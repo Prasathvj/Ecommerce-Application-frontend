@@ -114,7 +114,7 @@ export default function Payment() {
 
 
         } catch (error) {
-            
+            console.log(error)
         }
     }
 

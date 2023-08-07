@@ -38,20 +38,21 @@ import UpdateOrder from './components/admin/UpdateOrder';
 import UserList from './components/admin/userList';
 import UpdateUser from './components/admin/UpdateUser';
 import ReviewList from './components/admin/ReviewList';
+import Razerpay from './components/cart/Razerpay';
 
 function App() {
-  const [stripeApiKey, setStripeApiKey] = useState("");
+  //const [stripeApiKey, setStripeApiKey] = useState("");
   useEffect(() => {
     store.dispatch(loadUser)
-    async function getStripeApiKey(){
-      const {data} = await axios.get('https://ecommerce-application-ynf3.onrender.com/api/v1/stripeapi',{
-        headers:{
-          Authorization:`Bearer ${JSON.parse(localStorage.getItem("token"))}`
-      }
-      })
-      setStripeApiKey(data.stripeApiKey)
-    }
-    getStripeApiKey()
+    // async function getStripeApiKey(){
+    //   const {data} = await axios.get('https://ecommerce-application-ynf3.onrender.com/api/v1/stripeapi',{
+    //     headers:{
+    //       Authorization:`Bearer ${JSON.parse(localStorage.getItem("token"))}`
+    //   }
+    //   })
+    //   setStripeApiKey(data.stripeApiKey)
+    // }
+    // getStripeApiKey()
   },[])
 
   return (
@@ -78,8 +79,11 @@ function App() {
                       <Route path='/order/success' element={<ProtectedRoute><OrderSuccess/></ProtectedRoute> } />
                       <Route path='/orders' element={<ProtectedRoute><UserOrders/></ProtectedRoute> } />
                       <Route path='/order/:id' element={<ProtectedRoute><OrderDetail/></ProtectedRoute> } />
-                      {stripeApiKey && <Route path='/payment' element={<ProtectedRoute><Elements stripe={loadStripe(stripeApiKey)}><Payment/></Elements></ProtectedRoute> } />
-} 
+                      {/* Razerpay method */}
+                      <Route path='/razer' element={<Razerpay/>} />
+                      {/* stripe payment method */}
+                      {/* {stripeApiKey && <Route path='/payment' element={<ProtectedRoute><Elements stripe={loadStripe(stripeApiKey)}><Payment/></Elements></ProtectedRoute> } />
+}  */}
                   </Routes>
                 </div>
                 {/* Admin Routes */}

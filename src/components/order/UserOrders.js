@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 export default function UserOrders () {
     const { userOrders = []} = useSelector(state => state.orderState)
+    console.log(userOrders)
     const dispatch = useDispatch();
 
     useEffect(() => {
