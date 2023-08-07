@@ -67,7 +67,7 @@ function Razerpay() {
         
                 navigate('/order/success')
                 
-                const data =await axios.post('http://localhost:9090/api/v1/verify', { response: response },{
+                const data =await axios.post('https://ecommerce-application-ynf3.onrender.com/api/v1/verify', { response: response },{
                     headers:{
                         Authorization:`Bearer ${JSON.parse(localStorage.getItem("token"))}`
                     }
@@ -83,7 +83,7 @@ function Razerpay() {
          amount = Math.round( orderInfo.totalPrice);
         try {
             const _pay = { amount: amount}
-            const {data}= await axios.post('http://localhost:9090/api/v1/order', _pay,{
+            const {data}= await axios.post('https://ecommerce-application-ynf3.onrender.com/api/v1/order', _pay,{
                     headers:{
                         Authorization:`Bearer ${JSON.parse(localStorage.getItem("token"))}`
                     }
